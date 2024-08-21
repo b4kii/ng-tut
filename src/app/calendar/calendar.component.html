@@ -1,0 +1,14 @@
+<form [formGroup]="calendarForm" (ngSubmit)="handleSubmit()" >
+  <input type="text" id="name" formControlName="name" />
+  <input type="text" id="description" formControlName="description" />
+  <button [disabled]="!calendarForm.valid">Save</button>
+</form>
+
+<div>
+  <h1>Name</h1>
+  <div>{{ calendarForm.value.name }}</div>
+</div>
+<div>
+  <h1>Description</h1>
+  <div>{{ calendarForm.value.description }}</div>
+</div>
